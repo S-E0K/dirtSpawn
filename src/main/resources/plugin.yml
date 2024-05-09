@@ -1,0 +1,4 @@
+name: dirtSpawn
+version: '${version}'
+main: org.se0k.dirtspawn.DirtSpawn
+api-version: '1.20'
