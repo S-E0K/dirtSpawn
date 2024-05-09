@@ -13,9 +13,9 @@ public class dirtSpawnEvent implements Listener {
 
     //
     @EventHandler
-    public static void setDirt(PlayerInteractEvent e) {
+    public void setDirt(PlayerInteractEvent e) {
         Player player = e.getPlayer();
-        World world = player.getWorld();
+        World world = Util.getWorld("world");
         Location dirtRandom = new Location(world, -32, -55, -529);
         Location grassReset = new Location(world, -30, -55, -529);
         Location startLoc = new Location(world, -32, -56, -528);
@@ -27,7 +27,7 @@ public class dirtSpawnEvent implements Listener {
 
     }
 
-    public static void dirtRandom(Location startLoc) {
+    public void dirtRandom(Location startLoc) {
         double thisX = startLoc.getX();
         double thisZ = startLoc.getZ();
         for (int i = 1; i <= 16; i++) {
@@ -43,7 +43,7 @@ public class dirtSpawnEvent implements Listener {
         }
     }
 
-    public static void allDirt(Location startLoc) {
+    public void allDirt(Location startLoc) {
         double thisX = startLoc.getX();
         double thisZ = startLoc.getZ();
         for (int i = 1; i <= 16; i++) {
